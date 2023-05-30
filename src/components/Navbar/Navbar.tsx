@@ -6,8 +6,8 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            {data.map(item => {
-                return <div>{item}</div>
+            {data.map((item, index) => {
+                return <div key={index}>{item}</div>
             })}
         </nav>
     );

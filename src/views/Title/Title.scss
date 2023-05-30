@@ -1,0 +1,39 @@
+.title {
+  background: url("../../../public/sources/photo2.png") no-repeat right top;
+  background-size: contain;
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: linear-gradient(to left, transparent 32%, #b19187 57%);
+  }
+
+  h1, p {
+    margin: 0.8rem 1.5rem;
+    z-index: 3;
+    position: relative;
+  }
+
+  h1 {
+    font-family: Playfair Display, serif;
+    font-size: 38px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}

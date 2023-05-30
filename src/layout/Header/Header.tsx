@@ -1,8 +1,8 @@
 import React from 'react';
 import './Header.scss';
-import Container from "../Container/Container";
+import Container from "../../components/Container/Container";
 import { Link } from "react-scroll"
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Header = () => {
 
@@ -10,7 +10,7 @@ const Header = () => {
         <header className="header">
             <Container className="container">
                 <Link
-                    href="/"
+                    href="/Users/House/Downloads/Frontend/React/portfolio/public"
                     className="text-small font-light text-white xl:text-middle"
                     to="section"
                 >
