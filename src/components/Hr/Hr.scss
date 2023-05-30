@@ -1,0 +1,18 @@
+.hr {
+  width: 60px;
+  border: none;
+  border-bottom: 1px solid #257488;
+  margin: 0 0 40px 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .hr {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hr {
+    margin-bottom: 24px;
+  }
+}

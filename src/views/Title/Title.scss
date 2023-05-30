@@ -4,9 +4,8 @@
   width: 100%;
   max-width: 1440px;
   height: 550px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  margin: auto auto;
 
   &:before {
     content: '';
@@ -46,6 +45,14 @@
 @media screen and (max-width: 1280px) {
   .title {
     height: 450px;
+
+    &:before {
+      background: linear-gradient(to left, transparent 20%, #b19187 47%);
+    }
+
+    h1 {
+      font-size: 53px;
+    }
   }
 }
 
@@ -81,6 +88,14 @@
 
     h1 {
       font-size: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    &:before {
+      background: linear-gradient(to left, transparent 20%, #b19187 55%);
     }
   }
 }

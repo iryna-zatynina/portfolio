@@ -7,4 +7,37 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+section {
+  margin-bottom: 100px !important;
+}
+
+h2 {
+  margin: 0 0 65px;
+  font-family: Playfair Display, serif;
+  font-size: 32px;
+  line-height: 45px;
+}
+
+@media screen and (max-width: 1280px) {
+  h2 {
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 22px;
+  }
+  section {
+    margin-bottom: 54px !important;
+  }
+}
 

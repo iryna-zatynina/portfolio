@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
   .container {
     max-width: 1023px;
     padding-right: 1.25rem;
@@ -22,15 +22,15 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .container {
     max-width: 480px;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .container {
     padding-right: 1.25rem;
     padding-left: 1.25rem;
