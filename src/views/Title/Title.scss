@@ -1,14 +1,12 @@
 .title {
-  background: url("../../../public/sources/photo2.png") no-repeat right top;
+  background: url("../../../public/sources/photo2.png") no-repeat right;
   background-size: contain;
   width: 100%;
-  height: 350px;
+  max-width: 1440px;
+  height: 550px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
   &:before {
     content: '';
@@ -18,22 +16,71 @@
     right: 0;
     bottom: 0;
     z-index: 2;
-    background: linear-gradient(to left, transparent 32%, #b19187 57%);
+    background: linear-gradient(to left, transparent 20%, #b19187 50%);
   }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
 
   h1, p {
-    margin: 0.8rem 1.5rem;
+    margin: 1rem 0;
     z-index: 3;
     position: relative;
   }
 
   h1 {
     font-family: Playfair Display, serif;
-    font-size: 38px;
+    font-size: 68px;
   }
 
   p {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .title {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .title {
+    height: 350px;
+
+    &:before {
+      background: linear-gradient(to left, transparent 20%, #b19187 40%);
+    }
+
+    h1 {
+      font-size: 38px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    height: 250px;
+
+    &:before {
+      background: linear-gradient(to left, transparent 20%, #b19187 43%);
+    }
+
+    h1, p {
+      margin: 0.5rem 0;
+    }
+
+    h1 {
+      font-size: 22px;
+    }
   }
 }
