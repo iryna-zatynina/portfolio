@@ -1,0 +1,11 @@
+.experience {
+  font-size: 18px;
+  line-height: 28px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 150px;
+
+  h2 {
+    grid-column: 1 / 3;
+  }
+}

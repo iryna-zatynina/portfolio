@@ -3,6 +3,7 @@ import Title from "../../views/Title/Title";
 import './Main.scss';
 import Container from "../../components/Container/Container";
 import AboutMe from "../../views/AboutMe/AboutMe";
+import Experience from "../../views/Experience/Experience";
 
 const Main = () => {
     return (
@@ -10,6 +11,7 @@ const Main = () => {
             <Title />
             <Container>
                 <AboutMe/>
+                <Experience/>
             </Container>
         </main>
     );
