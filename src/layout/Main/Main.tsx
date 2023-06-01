@@ -4,6 +4,7 @@ import './Main.scss';
 import Container from "../../components/Container/Container";
 import AboutMe from "../../views/AboutMe/AboutMe";
 import Experience from "../../views/Experience/Experience";
+import Projects from "../../views/Projects/Projects";
 
 const Main = () => {
     return (
@@ -12,6 +13,7 @@ const Main = () => {
             <Container>
                 <AboutMe/>
                 <Experience/>
+                <Projects />
             </Container>
         </main>
     );

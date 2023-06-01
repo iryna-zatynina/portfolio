@@ -1,0 +1,7 @@
+.projects {
+  .projects-block {
+    display: grid;
+    grid-template-columns: 380px 380px 380px;
+    justify-content: space-between;
+  }
+}
