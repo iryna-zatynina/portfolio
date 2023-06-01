@@ -13,7 +13,7 @@
 
   &.large {
     justify-content: start;
-    width: 350px;
+    width: 330px;
     padding-left: 16px;
     margin-bottom: 10px;
   }
@@ -46,6 +46,9 @@
 @media screen and (max-width: 1280px) {
   .button {
     width: 180px;
+    &.large {
+      width: 230px;
+    }
   }
 }
 
@@ -54,11 +57,26 @@
   .button {
     width: 50px;
     height: 50px;
+    &.large {
+      width: 135px;
+    }
     svg {
       margin: 0;
     }
     span {
       display: none;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .button {
+    &.large {
+      font-size: 16px;
+      width: 114px;
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

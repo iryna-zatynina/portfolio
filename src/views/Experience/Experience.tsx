@@ -28,6 +28,17 @@ const Experience = () => {
             "Provided product support to clients, resolving issues and ensuring timely delivery of projects"],
             dates: "Sep 2022 - Dec 2022"
         },
+        {
+            title: "English School",
+            position: "English teacher",
+            location: "Kharkiv, Ukraine",
+            time: "Full-time",
+            description: ["Choose methodology for achieving students goal",
+            "Set a learning cycle routine and prepare materials",
+            "Adjust learning pass based on the students progress",
+            "Provide feedback cycles and assignment grades"],
+            dates: "Oct 2015 - Aug 2021"
+        },
     ]
 
     const [currentJob, setCurrentJob] = useState(data[0]);
@@ -37,7 +48,7 @@ const Experience = () => {
         <section className="experience">
             <Hr />
             <h2>Experience</h2>
-            <div>
+            <div className="buttons">
                 {data.map((item, index) => (
                     <Button
                         active={currentJob.title === item.title}
