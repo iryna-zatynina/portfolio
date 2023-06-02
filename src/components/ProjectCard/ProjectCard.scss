@@ -1,4 +1,5 @@
 .projectCard {
+  cursor: pointer;
   .wrapper {
     overflow: hidden;
     border-radius: 10px;
@@ -15,7 +16,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    cursor: pointer;
     transition: all 1s ease;
 
     img {
@@ -28,6 +28,7 @@
       transition: all 1s ease;
     }
 
+
     h4 {
       text-transform: uppercase;
       text-align: center;
@@ -36,6 +37,14 @@
       transition: all 1s ease;
     }
   }
+  h3 {
+    transition: all 1s ease;
+  }
+  .stack {
+    color: #257488;
+    font-weight: 300;
+  }
+
   &:hover {
     .img-block {
       transform: scale(110%);
@@ -49,6 +58,9 @@
       h4 {
         transform: scale(0.8) translateY(-50%);
       }
+    }
+    h3 {
+      color: #257488;
     }
   }
 }

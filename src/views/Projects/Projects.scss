@@ -1,7 +1,15 @@
 .projects {
+  .categories {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    font-size: 18px;
+    gap: 20px;
+  }
   .projects-block {
     display: grid;
     grid-template-columns: 380px 380px 380px;
     justify-content: space-between;
+    gap: 4rem 3rem;
   }
 }

@@ -36,7 +36,7 @@ const ProjectCard = ({item}: ProjectCardProps) => {
                 </div>
             </div>
             <h3>{item.title}</h3>
-            <span>{item.stack.join(' - ')}</span>
+            <span className="stack">{item.stack.join(' - ')}</span>
         </div>
     );
 };
