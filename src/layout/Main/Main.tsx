@@ -5,6 +5,7 @@ import Container from "../../components/Container/Container";
 import AboutMe from "../../views/AboutMe/AboutMe";
 import Experience from "../../views/Experience/Experience";
 import Projects from "../../views/Projects/Projects";
+import Reviews from '../../views/Reviews/Reviews';
 
 const Main = () => {
     return (
@@ -14,6 +15,7 @@ const Main = () => {
                 <AboutMe/>
                 <Experience/>
                 <Projects />
+                <Reviews />
             </Container>
         </main>
     );

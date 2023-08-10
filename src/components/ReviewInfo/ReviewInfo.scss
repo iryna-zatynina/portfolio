@@ -1,0 +1,50 @@
+.reviewInfo {
+    max-width: 590px;
+    display: flex;
+    flex-direction: column;
+    .blue {
+      color: #257488;
+      margin-bottom: 24px;
+    }
+  
+    .review-text {
+        height: 200px;
+        overflow: scroll;
+        margin-bottom: 40px;
+        p {
+            border-left: solid 3px rgb(217, 217, 217);
+            padding: 0 20px;
+            margin: 0;
+        }
+    }
+  
+    &_footer {
+        display: flex;
+        justify-content: space-between;
+        .date {
+            align-self: flex-end;
+            font-size: 16px;
+        }
+
+        .source {
+            color: black;
+            text-decoration: underline;
+        }  
+    }
+    
+  }
+  
+  @media screen and (max-width: 1280px) {
+    .jobInfo {
+      max-width: 500px;
+      .blue {
+        margin-bottom: 14px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      .date {
+        font-size: 14px;
+      }
+    }
+  }
