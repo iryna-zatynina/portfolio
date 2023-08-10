@@ -25,6 +25,9 @@
       background-color: black;
     }
   }
+  &.block {
+    display: none;
+  }
 
   svg {
     fill: black;

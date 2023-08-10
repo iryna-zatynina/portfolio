@@ -1,20 +1,9 @@
 import React from 'react';
 import './ProjectCard.scss';
+import {IItem} from "../../interfaces";
 
 interface ProjectCardProps {
-    item: {
-        title: string,
-        description:  string,
-        productionLink: string,
-        gitHubLink: string,
-        category: string,
-        icon?: string,
-        picture: string,
-        role: string,
-        stack: string[],
-        team: boolean,
-        type: string
-    }
+    item: IItem
 }
 
 const ProjectCard = ({item}: ProjectCardProps) => {
@@ -24,7 +13,7 @@ const ProjectCard = ({item}: ProjectCardProps) => {
                 <div
                     className="img-block"
                     style={{
-                        background: `url('${item.picture}')`,
+                        backgroundImage: `url('${item.picture}')`,
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover",
                         backgroundPosition: "center center"

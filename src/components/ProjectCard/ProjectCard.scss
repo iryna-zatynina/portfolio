@@ -28,7 +28,6 @@
       transition: all 1s ease;
     }
 
-
     h4 {
       text-transform: uppercase;
       text-align: center;
@@ -47,6 +46,7 @@
 
   &:hover {
     .img-block {
+      transition: all 1s ease;
       transform: scale(110%);
 
       span  {

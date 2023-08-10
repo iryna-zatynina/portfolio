@@ -1,25 +1,91 @@
-import React from 'react';
+import React, {JSX, useEffect, useState} from 'react';
 import './Projects.scss';
 import Hr from "../../components/Hr/Hr";
 import {projectsData} from "../../data"
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+import Button from "../../components/Button/Button"
+import {IItem} from "../../interfaces";
+import ProjectInfo from "../../components/ProjectInfo/ProjectInfo";
+import cn from 'classnames';
 
 const Projects = () => {
+    const [projects, setProjects] = useState<IItem[]>([]);
+    const [category, setCategory] = useState('All');
+    const [btnShow, setBtnShow] = useState(true);
+    const [projectsAmount, setProjectsAmount] = useState(6);
+    const [projectInfo, setProjectInfo] = useState<null | IItem>(null);
+
+    const onShowMoreClick = () => {
+        setProjectsAmount(prev => prev + 6)
+        console.log(projectsAmount)
+        if (projectsAmount >= projects.length) {
+            setBtnShow(false)
+        }
+    }
+
+    const handleCloseProjectInfoModal = () => {
+        setProjectInfo(null);
+    }
+
+    useEffect(() => {
+        getProjects(category)
+    }, [projectsAmount, category])
+
+    const getProjects = (category: string) => {
+        const proj: IItem[] = []
+        projectsData.forEach((item, index) => {
+            if (category === "All") {
+                proj.push(item)
+            } else if (category === item.category){
+                proj.push(item)
+            }
+        })
+        setProjects(proj)
+    }
+
+
+    const getCategories = () => {
+        const categories: string[] = ["All"];
+        projectsData.forEach((item, index) => {
+            if (!categories.includes(item.category)) {
+                categories.push(item.category)
+            }
+        })
+        return categories
+    }
 
     return (
         <section className="projects">
             <Hr />
             <h2>Projects</h2>
             <div className="categories">
-                <span>All</span>
-                <span>Test tasks</span>
-                <span>Educational</span>
-                <span>Pet</span>
+                {getCategories().map((item, index) => 
+                    <span 
+                        className={cn({'active' : item === category})}
+                        onClick={() => setCategory(item)} 
+                        key={index}
+                    >
+                        {item}
+                    </span>)}
             </div>
             <div className="projects-block">
-                {projectsData.map((item, index) => <ProjectCard key={index} item={item}/>
-                )}
+                {projects.map((item, index) => index < projectsAmount 
+                    ? <div onClick={() => setProjectInfo(item)}>
+                        <ProjectCard key={index} item={item}/>
+                      </div> 
+                    : null)}
             </div>
+            {projects.length > projectsAmount &&
+                <Button
+                    size="center"
+                    onClick={onShowMoreClick}
+                    className="center"
+                    btnShow={btnShow}
+                >
+                    Show more
+                </Button>
+            }
+            {projectInfo && <ProjectInfo item={projectInfo} onClose={handleCloseProjectInfoModal}/>}
         </section>
     );
 };

@@ -1,15 +1,36 @@
 .projects {
+  hr {
+    text-align: center;
+    margin: 0 auto 40px auto;
+  }
+  h2 {
+    text-align: center;
+  }
   .categories {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 40px;
     font-size: 18px;
     gap: 20px;
+    span {
+      cursor: pointer;
+      &:hover {
+        color: #257488;
+      }
+    }
+    .active {
+      color: #257488;
+      border-bottom: solid 1px #257488;
+    }
   }
   .projects-block {
     display: grid;
     grid-template-columns: 380px 380px 380px;
     justify-content: space-between;
     gap: 4rem 3rem;
+    margin-bottom: 50px;
+  }
+  .center {
+    margin: 0 auto;
   }
 }

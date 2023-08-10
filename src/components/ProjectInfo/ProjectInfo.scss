@@ -1,0 +1,96 @@
+.projectInfo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.68);
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal {
+    background: white;
+    width: 50%;
+    height: max-content;
+    border-radius: 3px;
+    box-shadow:  1px 0px 5px black;
+    padding: 24px;
+
+    hr {
+      border: none;
+      border-bottom: 1px solid #ededed;
+    }
+
+    .info-header {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 24px;
+      button {
+        border: none;
+        background-color: white;
+        align-self: flex-start;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .info-content {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 40px;
+      margin: 36px 24px;
+
+      .img-block {
+        box-sizing: border-box;
+        width: 380px;
+        height: 420px;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 300;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+  
+        h4 {
+          text-transform: uppercase;
+          text-align: center;
+          margin: 0;
+          font-size: 28px;
+        }
+      }
+
+      .description-block {
+        p {
+          margin: 0 0 30px 0;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .stack {
+          color: #257488;
+        }
+        .isTeam {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 10px;
+        }
+        .role {
+          margin-bottom: 50px;
+        }
+
+        .buttons {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+        }
+      }
+    }
+  }
+}

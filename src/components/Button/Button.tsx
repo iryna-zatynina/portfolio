@@ -6,14 +6,17 @@ interface ButtonProps extends DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorE
     children: ReactNode,
     href?: string,
     size?: string,
-    active?: boolean
+    active?: boolean,
+    className?: string,
+    btnShow?: boolean
 }
 
-const Button = ({children, href, size, active, onClick}: ButtonProps) => {
+const Button = ({children, href, size, active, onClick, className, btnShow}: ButtonProps) => {
     return (
-        <a onClick={onClick} href={href} className={cn("button", {
-            ['large'] : size === 'large',
-            ['active'] : active === true
+        <a onClick={onClick} href={href} rel="noreferrer" className={cn("button", className, {
+            'large' : size === 'large',
+            'active' : active === true,
+            'block' : btnShow === false
         })} target={size ? "_self" : "_blank"}>
             {children}
         </a>

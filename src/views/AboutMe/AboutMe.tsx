@@ -43,7 +43,7 @@ const AboutMe = () => {
             <p>Also I gained experience during different internships where I improved my level of JavaScript and TypeScript. I have also completed several projects in web development, which have helped me develop skills in PWA, REST API, GraphQL, IndexedDb and so on.</p>
             <div className="buttons">
                 {data.map((item, index) => (
-                    <Button href={item.url}>
+                    <Button href={item.url} key={index}>
                         {getIcon(item.name)}
                         <span>{item.name}</span>
                     </Button>

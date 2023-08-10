@@ -54,6 +54,7 @@ const Experience = () => {
                         active={currentJob.title === item.title}
                         size='large'
                         onClick={() => setCurrentJob(item)}
+                        key={index}
                     >
                         {item.title}
                     </Button>
