@@ -9,11 +9,7 @@ const Header = () => {
     return (
         <header className="header">
             <Container className="container">
-                <Link
-                    href="/Users/House/Downloads/Frontend/React/portfolio/public"
-                    className="text-small font-light text-white xl:text-middle"
-                    to="section"
-                >
+                <Link className='logo' to="title" spy={true} smooth={true} duration={500} offset={-67}>
                     Iryna Zatynina
                 </Link>
                 <Navbar />

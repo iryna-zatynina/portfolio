@@ -2,4 +2,13 @@
   display: flex;
   gap: 3rem;
   padding: 1.5rem 0;
+  .link {
+    cursor: pointer;
+  }
+  .active-link {
+    border-bottom: solid 1px white;
+  }
+  .active-linkk {
+    border-bottom: solid 1px white;
+  }
 }

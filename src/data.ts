@@ -1,3 +1,19 @@
+export const categoriesData = ["About me", "Experience", "Projects", "Reviews"];
+
+export const myLinksData = [
+    {
+        name: "Send an email",
+        url: "mailto:ira.zat1997@gmail.com"
+    },
+    {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/iryna-zatynina-ba4713175/"
+    },
+    {
+        name: "GitHub",
+        url: "https://github.com/iryna-zatynina"
+    }
+]
 export const experienceData = [
     {
         title: "Kleesto",
@@ -32,7 +48,7 @@ export const experienceData = [
         "Provide feedback cycles and assignment grades"],
         dates: "Oct 2015 - Aug 2021"
     },
-]
+];
 
 export const projectsData = [
     {

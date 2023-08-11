@@ -1,4 +1,4 @@
-import React, {JSX, useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import './Projects.scss';
 import Hr from "../../components/Hr/Hr";
 import {projectsData} from "../../data"
@@ -7,6 +7,7 @@ import Button from "../../components/Button/Button"
 import {IItem} from "../../interfaces";
 import ProjectInfo from "../../components/ProjectInfo/ProjectInfo";
 import cn from 'classnames';
+import { Element } from 'react-scroll';
 
 const Projects = () => {
     const [projects, setProjects] = useState<IItem[]>([]);
@@ -55,7 +56,7 @@ const Projects = () => {
     }
 
     return (
-        <section className="projects">
+        <Element className="projects" name="Projects">
             <Hr />
             <h2>Projects</h2>
             <div className="categories">
@@ -86,7 +87,7 @@ const Projects = () => {
                 </Button>
             }
             {projectInfo && <ProjectInfo item={projectInfo} onClose={handleCloseProjectInfoModal}/>}
-        </section>
+        </Element>
     );
 };
 
