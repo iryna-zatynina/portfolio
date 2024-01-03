@@ -26,8 +26,8 @@ const AboutMe = () => {
             <div className="img"></div>
             <Hr/>
             <h2>About Me</h2>
-            <p>I specialize in work with React.js and React-based frameworks, I can develop a CSR as well SSR applications. I am able to create a full app using classical backend or CMS.</p>
-            <p>Also I gained experience during different internships where I improved my level of JavaScript and TypeScript. I have also completed several projects in web development, which have helped me develop skills in PWA, REST API, GraphQL, IndexedDb and so on.</p>
+            <p>I am looking for opportunities where I will be able to utilise my skills and knowledge to make a meaningful contribution to the success of projects. I am a self-motivated and passionate developer who is always eager to learn and grow. I am also a team player who values collaboration and communication, and I am committed to delivering high-quality work in a timely manner.</p>
+            <p>My stack: <br/> TypeScript, JavaScript, Angular, React, Redux, NextJS, NodeJS, Express, MongoDB, MySQL, HTML, CSS, SCSS, ES6, AJAX, GIT, REST API, GraphQL, Bootstrap, WebPack, GULP, SCRUM, Material UI</p>
             <div className="buttons">
                 {myLinksData.map((item, index) => (
                     <Button href={item.url} key={index}>
