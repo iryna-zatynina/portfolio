@@ -47,6 +47,7 @@ const ProjectCard = ({item}: ProjectCardProps) => {
                         initial={{ scale: 1 }}
                         animate={isImageHovered ? { scale: 0.7 } : { scale: 1 }}
                         transition={{ duration: 1 }}
+                        className="svg"
                     />
                     <motion.h4 
                         initial={{ scale: 1, y: 0 }}

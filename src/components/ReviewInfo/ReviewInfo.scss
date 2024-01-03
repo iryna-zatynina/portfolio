@@ -31,20 +31,10 @@
             text-decoration: underline;
         }  
     }
-    
+}
+
+@media screen and (max-width: 1023px) {
+  .reviewInfo {
+    max-width: 100%;
   }
-  
-  @media screen and (max-width: 1280px) {
-    .jobInfo {
-      max-width: 500px;
-      .blue {
-        margin-bottom: 14px;
-      }
-      li {
-        margin-bottom: 8px;
-      }
-      .date {
-        font-size: 14px;
-      }
-    }
-  }
+}

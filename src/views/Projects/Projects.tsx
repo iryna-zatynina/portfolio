@@ -8,6 +8,7 @@ import {IItem} from "../../interfaces";
 import ProjectInfo from "../../components/ProjectInfo/ProjectInfo";
 import cn from 'classnames';
 import { Element } from 'react-scroll';
+import Dropdown from '../../components/Dropdown/Dropdown';
 
 const Projects = () => {
     const [projects, setProjects] = useState<IItem[]>([]);
@@ -15,6 +16,7 @@ const Projects = () => {
     const [btnShow, setBtnShow] = useState(true);
     const [projectsAmount, setProjectsAmount] = useState(6);
     const [projectInfo, setProjectInfo] = useState<null | IItem>(null);
+    const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
     const onShowMoreClick = () => {
         setProjectsAmount(prev => prev + 6)
@@ -55,19 +57,44 @@ const Projects = () => {
         return categories
     }
 
+    const handleDropdownToggle = () => {
+        setIsDropdownVisible((prev) => !prev);
+    };
+
+    const handleCategoryClick = (clickedCategory: string) => {
+        setCategory(clickedCategory);
+        setIsDropdownVisible(false);
+    };
+
     return (
         <Element className="projects" name="Projects">
             <Hr />
             <h2>Projects</h2>
             <div className="categories">
-                {getCategories().map((item, index) => 
-                    <span 
-                        className={cn({'active' : item === category})}
-                        onClick={() => setCategory(item)} 
-                        key={index}
-                    >
-                        {item}
-                    </span>)}
+                {window.innerWidth <= 768 ? (
+                    <>
+            <span className="dropdown-toggle" onClick={handleDropdownToggle}>
+              {category} &#9660;
+            </span>
+                        {isDropdownVisible && (
+                            <Dropdown
+                                categories={getCategories()}
+                                selectedCategory={category}
+                                onSelect={handleCategoryClick}
+                            />
+                        )}
+                    </>
+                ) : (
+                    getCategories().map((item, index) => (
+                        <span
+                            className={cn({ active: item === category })}
+                            onClick={() => handleCategoryClick(item)}
+                            key={index}
+                        >
+              {item}
+            </span>
+                    ))
+                )}
             </div>
             <div className="projects-block">
                 {projects.map((item, index) => index < projectsAmount 

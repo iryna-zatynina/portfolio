@@ -58,6 +58,7 @@
 }
 @media screen and (max-width: 768px) {
   .aboutMe {
+    margin-top: 50px;
     grid-template-columns: 1fr;
     .img {
       width: 100%;

@@ -1,0 +1,46 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(26 26 26);
+  transition: 0.3s;
+  width: 30%;
+
+  .close svg {
+    fill: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .categories {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .link {
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #555;
+    }
+
+    &.active-link {
+      border-bottom: solid 1px white;
+    }
+  }
+
+  &.open {
+    right: 0;
+  }
+}

@@ -2,13 +2,35 @@
   display: flex;
   gap: 3rem;
   padding: 1.5rem 0;
+
+  .burger-menu {
+    display: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: flex;
+    }
+  }
+
   .link {
     cursor: pointer;
   }
+
   .active-link {
     border-bottom: solid 1px white;
   }
-  .active-linkk {
-    border-bottom: solid 1px white;
+
+  &.menu-open {
+    .sidebar {
+      right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 0;
   }
 }

@@ -27,12 +27,37 @@
   }
   .projects-block {
     display: grid;
-    grid-template-columns: 380px 380px 380px;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
     gap: 4rem 3rem;
     margin-bottom: 50px;
   }
   .center {
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .projects {
+    .projects-block {
+      gap: 2rem 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    margin-top: 50px;
+    position: relative;
+    .categories {
+      margin-bottom: 10px;
+      .active {
+        color: #257488;
+        border-bottom: none;
+      }
+    }
+    .projects-block {
+      grid-template-columns: 1fr;
+    }
   }
 }

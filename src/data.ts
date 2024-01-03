@@ -88,7 +88,7 @@ export const projectsData = [
         icon: "./sources/qira-icon.svg",
         picture: "./sources/qira-bg.png",
         role: "Frontend Developer",
-        stack: ["Parcel.js", "JavaScript", "Tailwind", "SCSS"],
+        stack: ["TypeScript", "Angular", "Tailwind", "SCSS"],
         team: true,
         type: "Web platform"
     },
@@ -101,7 +101,7 @@ export const projectsData = [
         icon: "./sources/kleesto-icon1.svg",
         picture: "./sources/kleesto-bg.png",
         role: "Frontend Developer",
-        stack: ["Parcel.js", "JavaScript", "Tailwind", "SCSS"],
+        stack: ["TypeScript", "React",  "Tailwind", "SCSS"],
         team: true,
         type: "Web platform"
     },

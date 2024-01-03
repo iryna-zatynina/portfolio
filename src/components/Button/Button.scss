@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  white-space: nowrap;
 
   &.large {
     justify-content: start;
@@ -61,8 +62,10 @@
   .button {
     width: 50px;
     height: 50px;
-    &.large {
-      width: 135px;
+    &.large,
+    &.center{
+      width: fit-content;
+      padding: 0 20px;
     }
     svg {
       margin: 0;
@@ -76,11 +79,12 @@
   .button {
     &.large {
       font-size: 16px;
-      width: 114px;
-      padding-left: 0;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-bottom: 0;
+      box-shadow:  none;
+      border: 1px solid rgba(37, 116, 136, 0.57);
     }
   }
 }
