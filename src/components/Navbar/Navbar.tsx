@@ -49,12 +49,13 @@ const Navbar = () => {
                     <Link
                         key={index}
                         className="link"
-                        activeClass={(item === 'Reviews' && isAtBottom) || !isAtBottom ? 'active-link' : ''}
+                        activeClass={(item === 'Reviews' && 'active-link') || !isAtBottom ? 'active-link' : ''}
                         to={item}
                         spy={true}
+                        hashSpy={true}
                         smooth={true}
                         duration={500}
-                        offset={item === 'Reviews' ? -650 : -120}
+                        offset={-125}
                     >
                         {item}
                     </Link>
