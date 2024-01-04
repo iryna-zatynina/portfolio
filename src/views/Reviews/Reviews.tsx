@@ -29,9 +29,9 @@ const Reviews = () => {
     }, []);
 
     return (
-        <Element className="reviews" name="Reviews">
+        <Element className="reviews" name="Testimonials">
             <Hr/>
-            <h2>Reviews</h2>
+            <h2>Testimonials</h2>
             {isSmallScreen ? (<div className="reviews-swiper">
                 <Swiper navigation={{
                     nextEl: '.reviews-custom-swiper-button-next',

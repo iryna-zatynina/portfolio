@@ -1,4 +1,4 @@
-export const categoriesData = ["About me", "Experience", "Projects", "Reviews"];
+export const categoriesData = ["About me", "Experience", "Projects", "Testimonials"];
 
 export const myLinksData = [
     {

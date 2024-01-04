@@ -49,7 +49,7 @@ const Navbar = () => {
                     <Link
                         key={index}
                         className="link"
-                        activeClass={(item === 'Reviews' && 'active-link') || !isAtBottom ? 'active-link' : ''}
+                        activeClass={(item === 'Testimonials' && 'active-link') || !isAtBottom ? 'active-link' : ''}
                         to={item}
                         spy={true}
                         hashSpy={true}
