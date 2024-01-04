@@ -9,10 +9,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   .modal {
     background: white;
-    width: 50%;
+    width: 70%;
     height: max-content;
     border-radius: 3px;
     box-shadow:  1px 0px 5px black;
@@ -35,18 +36,20 @@
         &:hover {
           transform: scale(1.2);
         }
+        svg {
+          fill: #1A1A1A;
+        }
       }
     }
 
     .info-content {
-      display: grid;
-      grid-template-columns: auto 1fr;
+      display: flex;
       gap: 40px;
       margin: 36px 24px;
 
       .img-block {
+        flex: 1 1 50%;
         box-sizing: border-box;
-        width: 380px;
         height: 420px;
         padding: 20px;
         font-size: 18px;
@@ -64,9 +67,15 @@
           margin: 0;
           font-size: 28px;
         }
+
+        img {
+          height: 110px;
+          width: 110px;
+        }
       }
 
       .description-block {
+        flex: 1 1 50%;
         p {
           margin: 0 0 30px 0;
           font-size: 16px;
@@ -93,4 +102,58 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 1023px) {
+  .projectInfo {
+    .modal {
+      width: 85%;
+      .info-content {
+        .img-block {
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projectInfo {
+    .modal {
+      .info-content {
+        .img-block {
+          flex-basis: 30%;
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projectInfo {
+    .modal {
+      hr {
+        margin-bottom: 20px;
+      }
+      .info-header {
+        padding: 0;
+      }
+      .info-content {
+        margin: 0;
+        .img-block {
+          display: none;
+        }
+        .description-block {
+          .role {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.body-no-scroll {
+  overflow: hidden;
 }

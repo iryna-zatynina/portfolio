@@ -17,6 +17,20 @@ const Projects = () => {
     const [projectsAmount, setProjectsAmount] = useState(6);
     const [projectInfo, setProjectInfo] = useState<null | IItem>(null);
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
 
     const onShowMoreClick = () => {
         setProjectsAmount(prev => prev + 6)
@@ -71,7 +85,7 @@ const Projects = () => {
             <Hr />
             <h2>Projects</h2>
             <div className="categories">
-                {window.innerWidth <= 768 ? (
+                {isSmallScreen ? (
                     <>
             <span className="dropdown-toggle" onClick={handleDropdownToggle}>
               {category} &#9660;

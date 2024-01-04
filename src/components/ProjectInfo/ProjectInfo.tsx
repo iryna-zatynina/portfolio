@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './ProjectInfo.scss';
 import {IItem} from "../../interfaces";
 import Button from "../Button/Button";
@@ -13,12 +13,20 @@ interface ProjectInfoProps {
 }
 
 const ProjectInfo = ({item, onClose}: ProjectInfoProps) => {
+    useEffect(() => {
+        document.body.classList.add('body-no-scroll');
+
+        return () => {
+            document.body.classList.remove('body-no-scroll');
+        };
+    }, []);
+
     return (
         <div className="projectInfo">
             <div className="modal">
                 <div className='info-header'>
                     <h3>{item.title}</h3>
-                    <button onClick={onClose}><CloseIcon /></button>
+                    <button onClick={onClose} className="close"><CloseIcon /></button>
                 </div>
                 
                 <hr/>
@@ -41,13 +49,11 @@ const ProjectInfo = ({item, onClose}: ProjectInfoProps) => {
                         <p className='isTeam'>own {item.team ? <ToggleCommandIcon /> : <ToggleOwnIcon />} team</p>
                         <p className='role'>Role: {item.role}</p>
                         <div className='buttons'>
-                            <a href={item.productionLink} target='_blank' rel="noreferrer"><Button>Live page</Button></a>
-                            <a href={item.gitHubLink} target='_blank' rel="noreferrer"><GitHubBigIcon /></a> 
+                            <a href={item.productionLink} target='_blank' rel="noreferrer"><Button size='large'>Live page</Button></a>
+                            {item.gitHubLink !=="" && (<a href={item.gitHubLink} target='_blank' rel="noreferrer"><GitHubBigIcon /></a>)}
                         </div>
-                        
                     </div>
                 </div>
-                
                 <hr/>
             </div>
         </div>
