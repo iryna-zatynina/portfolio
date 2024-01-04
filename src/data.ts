@@ -295,7 +295,7 @@ export const reviewsData = [
             "\n" +
             "She is an excellent communicator, actively participating in team discussions. Iryna is also adept at collaborating with team members and fostering a positive and productive working environment.\n" +
             "With an interest in understanding the business side of software development. This makes her approach holistic, and it contributes a lot to the overall success of the projects she is involved in.",
-        data: "Dec 22023"
+        data: "Dec 2023"
     },
     {
         name: "Vladyslav Nasadyk",
